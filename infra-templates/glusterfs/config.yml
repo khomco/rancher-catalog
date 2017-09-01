@@ -1,4 +1,6 @@
 name: GlusterFS Cluster
+description: |
+  Clustered GlusterFS deployment
 version: 0.1.4
 category: Storage
 labels:
