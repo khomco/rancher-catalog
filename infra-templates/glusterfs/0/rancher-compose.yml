@@ -1,3 +1,8 @@
+version: '2'
+catalog:
+  name: GlusterFS
+  version: v1.0
+  description: Clustered deployment of GlusterFS
 glusterfs-server:
   scale: 3
   retain_ip: true
