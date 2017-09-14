@@ -1,3 +1,4 @@
+version: '2'
 glusterfs-server:
   image: rancher/glusterfs:v0.2.1
   volumes_from:

@@ -1,3 +1,4 @@
+version: '2'
 catalog:
   name: GlusterFS
   version: v1.0
