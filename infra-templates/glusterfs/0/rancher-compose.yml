@@ -4,11 +4,6 @@ catalog:
   version: v1.0
   description: Clustered deployment of GlusterFS
   questions:
-    - variable: volume_name
-      label: "Volume Name"
-      type: "string"
-      required: true
-      default: "my_vol"
     - variable: network_mode
       label: "Network Mode"
       type: "string"
@@ -18,4 +13,4 @@ glusterfs-server:
   scale: 3
   retain_ip: true
   metadata:
-    volume_name: "${volume_name}"
+    volume_name: "my_vol"
