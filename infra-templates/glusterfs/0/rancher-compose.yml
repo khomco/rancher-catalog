@@ -3,9 +3,6 @@ catalog:
   name: GlusterFS
   version: v1.0
   description: Clustered deployment of GlusterFS
-glusterfs-server:
-  scale: 3
-  retain_ip: true
   questions:
     - variable: volume_name
       label: "Volume Name"
@@ -17,3 +14,6 @@ glusterfs-server:
       type: "string"
       default: "container:glusterfs-server"
       required: true
+glusterfs-server:
+  scale: 3
+  retain_ip: true
