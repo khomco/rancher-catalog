@@ -14,8 +14,9 @@ catalog:
       type: "string"
       default: "container:glusterfs-server"
       required: true
-glusterfs-server:
-  scale: 3
-  retain_ip: true
-  metadata:
-    volume_name: "${volume_name}"
+services:
+  glusterfs-server:
+    scale: 3
+    retain_ip: true
+    metadata:
+      volume_name: "${volume_name}"
