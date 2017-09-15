@@ -8,7 +8,7 @@ glusterfs-server:
   command: giddyup leader elect --proxy-tcp-port=2160 /opt/rancher/peerprobe.sh ${network_mode}
 glusterfs-daemon:
   image: rancher/glusterfs:v0.2.1
-  network: ${network_mode}
+  net: ${network_mode}
   cap_add:
     - SYS_ADMIN
   volumes_from:
@@ -22,7 +22,7 @@ glusterfs-daemon:
 glusterfs-volume-create:
   image: rancher/glusterfs:v0.2.1
   command: /opt/rancher/replicated_volume_create.sh ${network_mode}
-  network: 'container:glusterfs-server'
+  net: 'container:glusterfs-server'
   volumes_from:
     - glusterfs-data
   labels:
@@ -36,7 +36,7 @@ glusterfs-volume-create:
 glusterfs-data:
   image: busybox
   command: /bin/true
-  network: none
+  net: none
   volumes:
     - /var/run
     - /var/lib/glusterd
