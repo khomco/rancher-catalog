@@ -1,5 +1,4 @@
-version: '2'
-catalog:
+.catalog:
   name: GlusterFS
   version: v1.0
   description: Clustered deployment of GlusterFS
@@ -14,9 +13,8 @@ catalog:
       type: "string"
       default: "container:glusterfs-server"
       required: true
-services:
-  glusterfs-server:
-    scale: 3
-    retain_ip: true
-    metadata:
-      volume_name: "${volume_name}"
+glusterfs-server:
+  scale: 3
+  retain_ip: true
+  metadata:
+    volume_name: "${volume_name}"
